@@ -1,59 +1,42 @@
 
 var tasks = {
-    time: [],
-    text: []
+    text: "",
+    date: ""
 };
 
-var createTask = function () {
-    $("textarea").blur(funtion() {
-    time = $(this("task-time")),
-    text = $(this("text-area"))
-    tasks.push({
-        time: time,
-        text: text
-    })
-    });
-    saveTasks();
-};
+var tasksObj = JSON.parse(localStorage.getItem("tasksObj")) || [];
 
 
-    // $(".input-group").on("click", ".btn", function() {
     
-    //     var text = $(this)
-    //     .text()
-    //     .trim();
-    //     var textInput = $("textarea")
-    //         .val(text);
-    //         $(this).replaceWith(textInput);
-    //         tasks.push({
-    //             text: textInput
-    //         });
-    //         saveTasks();
-    //         });
-       
+
+$("#task-wrapper").on("click", "span",function() {
+    var taskText = $("textarea")
+        .val();
+    var taskDate = $("#task-time")
+        .text();
+        console.log(taskText);
+        console.log(taskDate);
+        tasks.push({
+            text: taskText,
+            date: taskDate
+        });
+        saveTasks();
+      });
 
 
 
-
-// $(".btn").on("click", function() {
-//     var taskText = $("this")
-//         .text()
-//         .trim();
-//     var textInput = $("<textarea>")
-//         .addClass("form-control")
-//         .text();
-//         $(this).replaceWith(textInput);
-        
-//         saveTasks();
-// });
 
 var saveTasks = function () {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-}
+    localStorage.setItem("tasks", JSON.stringify(tasksj));
+};
 
-var loadTasks = function() {
-    tasks = JSON.parse(localStorage.getItem("tasks"));
-}
+// var loadTasks = function() {
+//     tasks = JSON.parse(localStorage.getItem("tasksObj"));
+//     if (!tasks) {
+//         tasks = {
+//             toDo: []
+//     };
+// }
+// $.each(tasks, function(list,array))
 
-
-loadTasks();
+// loadTasks();

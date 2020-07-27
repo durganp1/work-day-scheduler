@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,7 +19,6 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -36,7 +36,29 @@
         <div class = "input-group-prepend">
           <span class = "input-group-text" id = "task-time">8:00am</span>
         </div>
-        <textarea id = "textarea" type = "text" class = "form-control" aria-label = "With textarea" aria-describedby="8am"></textarea>
+        <textarea id = "textarea" class = "form-control" aria-label = "With textarea"></textarea>
+        <div class = "input-group-append">
+          <button class = "btn btn-outline-secondary" type = "button" id = "save-button">
+            <span class="oi oi-lock-locked"></span>
+          </button>
+        </div>
+      </div>
+      <div class = "input-group input-group-lg" id = "task-wrapper">
+        <div class = "input-group-prepend">
+          <span class = "input-group-text" id = "task-time">9:00am</span>
+        </div>
+        <textarea id = "textarea" type="text" class = "form-control" aria-label = "With textarea" aria-describedby="9am"></textarea>
+        <div class = "input-group-append">
+          <button class = "btn btn-outline-secondary" type = "button" id = "save-button">
+            <span class="oi oi-lock-locked"></span>
+          </button>
+        </div>
+      </div>
+      <div class = "input-group input-group-lg" id = "task-wrapper">
+        <div class = "input-group-prepend">
+          <span class = "input-group-text" id = "task-time">10:00am</span>
+        </div>
+        <textarea id = "textarea" type = "text" class = "form-control" aria-label = "With textarea" aria-describedby="10am"></textarea>
         <div class = "input-group-append">
           <button class = "btn btn-outline-secondary" type = "button" id = "save-button">
             <span class="oi oi-lock-locked"></span>
@@ -45,29 +67,7 @@
       </div>
       <div class = "input-group input-group-lg">
         <div class = "input-group-prepend">
-          <span class = "input-group-text" id = "9am">9:00am</span>
-        </div>
-        <textarea type="text" class = "form-control" aria-label = "With textarea" aria-describedby="9am"></textarea>
-        <div class = "input-group-append">
-          <button class = "btn btn-outline-secondary" type = "button" id = "save-button">
-            <span class="oi oi-lock-locked"></span>
-          </button>
-        </div>
-      </div>
-      <div class = "input-group input-group-lg">
-        <div class = "input-group-prepend">
-          <span class = "input-group-text" id = "10am">10:00am</span>
-        </div>
-        <textarea type="text" class = "form-control" aria-label = "With textarea" aria-describedby="10am"></textarea>
-        <div class = "input-group-append">
-          <button class = "btn btn-outline-secondary" type = "button" id = "save-button">
-            <span class="oi oi-lock-locked"></span>
-          </button>
-        </div>
-      </div>
-      <div class = "input-group input-group-lg">
-        <div class = "input-group-prepend">
-          <span class = "input-group-text" id = "11am">11:00am</span>
+          <span class = "input-group-text" id = "task-time">11:00am</span>
         </div>
         <textarea type="text" class = "form-control" aria-label = "With textarea" aria-describedby="11am"></textarea>
         <div class = "input-group-append">
@@ -78,7 +78,7 @@
       </div>
       <div class = "input-group input-group-lg">
         <div class = "input-group-prepend">
-          <span class = "input-group-text" id = "12pm">12:00pm</span>
+          <span class = "input-group-text" id = "task-time">12:00pm</span>
         </div>
         <textarea type="text" class = "form-control" aria-label = "With textarea" aria-describedby="12pm"></textarea>
         <div class = "input-group-append">
@@ -89,7 +89,7 @@
       </div>
       <div class = "input-group input-group-lg">
         <div class = "input-group-prepend">
-          <span class = "input-group-text" id = "1pm">1:00pm</span>
+          <span class = "input-group-text" id = "task-time">1:00pm</span>
         </div>
         <textarea type="text" class = "form-control" aria-label = "With textarea" aria-describedby="1pm"></textarea>
         <div class = "input-group-append">
@@ -100,7 +100,7 @@
       </div>
       <div class = "input-group input-group-lg">
         <div class = "input-group-prepend">
-          <span class = "input-group-text" id = "2pm">2:00pm</span>
+          <span class = "input-group-text" id = "task-time">2:00pm</span>
         </div>
         <textarea type="text" class = "form-control" aria-label = "With textarea" aria-describedby="2pm"></textarea>
         <div class = "input-group-append">
@@ -111,7 +111,7 @@
       </div>
       <div class = "input-group input-group-lg">
         <div class = "input-group-prepend">
-          <span class = "input-group-text" id = "3pm">3:00pm</span>
+          <span class = "input-group-text" id = "task-time">3:00pm</span>
         </div>
         <textarea type="text" class = "form-control" aria-label = "With textarea" aria-describedby="3pm"></textarea>
         <div class = "input-group-append">
@@ -122,7 +122,7 @@
       </div>
       <div class = "input-group input-group-lg">
         <div class = "input-group-prepend">
-          <span class = "input-group-text" id = "4pm">4:00pm</span>
+          <span class = "input-group-text" id = "task-time">4:00pm</span>
         </div>
         <textarea type="text" class = "form-control" aria-label = "With textarea" aria-describedby="4pm"></textarea>
         <div class = "input-group-append">
@@ -133,7 +133,7 @@
       </div>
       <div class = "input-group input-group-lg">
         <div class = "input-group-prepend">
-          <span class = "input-group-text" id = "5pm">5:00pm</span>
+          <span class = "input-group-text" id = "task-time">5:00pm</span>
         </div>
         <textarea type="text" class = "form-control" aria-label = "With textarea" aria-describedby="5pm"></textarea>
         <div class = "input-group-append">
@@ -144,9 +144,7 @@
       </div>
 
     </div>
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="script.js"></script>
   </body>
 </html>

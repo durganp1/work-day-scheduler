@@ -4,7 +4,7 @@ body {
   line-height: 1;
 }
 
-textarea{
+.form-control {
   background: transparent;
   border: none;
   resize: none;
@@ -21,22 +21,28 @@ textarea{
   border-bottom: 10px solid black;
 }
 
-.input-group-text {
+.hour-block {
   background-color: #ffffff;
   border-top: .1rem solid black;
   border-left: none;
   border-bottom: .1rem solid black;
   padding-left: 1rem;
-  width: 8rem;
+  width: 100%;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
-.description{
-  white-space: pre-wrap;
-}
 
-.time-block{
+
+.input-group {
   text-align: center;
-  border-radius: 15px;
+  
+}
+
+.input-group-prepend {
+  margin: auto;
+  padding-right: 5px;
+  min-width: 80px;
 }
 
 .form-control {
@@ -54,12 +60,12 @@ textarea{
 
 .present {
   background-color: #ff6961;
-  color: white;
+  color: black
 }
 
 .future {
   background-color: #77dd77;
-  color: white;
+  color: black;
 }
 
 .btn {
@@ -68,9 +74,7 @@ textarea{
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+  min-width: 80px;
 }
 
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
-}
+
